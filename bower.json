@@ -1,0 +1,22 @@
+{
+  "name": "eventsauce",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Jihye Kang"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "grunt": "~0.4.5"
+  }
+}

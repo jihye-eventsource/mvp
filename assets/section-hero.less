@@ -1,0 +1,48 @@
+
+
+.hero-area {
+	position: relative;
+	left: 0;
+	top: 0;
+	right: 0;
+	color: #fff;
+	.hero-area-background {
+		-moz-transition: height 1s ease-in-out;
+		transition: height 1s ease-in-out;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.hero-area-overlay {
+		background: rgba(0,0,0,0.3);
+		overflow: hidden;
+		height: 100%;
+		z-index: 2;
+	}
+	.hero-area-padding {
+		@media @phone {
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+		margin-top: 110px;
+		margin-bottom: 110px;
+	}
+	.hero-area-heading {
+		@media @phone-and-tablet {
+			margin-bottom: 40px;
+			text-align: center;
+		}
+		h1 {
+			font-weight: bold;
+			margin-top: 0;
+			font-size: 56px;
+			line-height:1.3em;
+			@media @phone {
+				font-size: 40px;
+			}
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}

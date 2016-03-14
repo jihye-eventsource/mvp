@@ -1,0 +1,65 @@
+.funnel-modal {
+	.modal-dialog {
+		min-width: 80%;
+		text-align: center;
+	}
+	form {
+		.funnel-title {
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 1.4em;
+		}
+		.funnel-button {
+			min-width: 260px;
+		}
+
+		.funnel-input {
+			max-width: 800px;
+			padding-right: 15px;
+			padding-left: 15px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 40px;
+		}
+		.radio-wrapper {
+			display: inline-block;
+		}
+		.radios .radio{
+			width: 160px;
+			height: 98px;
+			border: 2px solid #e9ebee;
+			background-color: #fff;
+			text-align: center;
+			padding: 0 8px;
+			cursor: pointer;
+			vertical-align: top;
+			border-radius: 5px;
+			margin: 0 22px 22px 0;
+			font-size: 1.6rem;
+			display: table;
+			-moz-transition: all .1s ease-in;
+			transition: all .1s ease-in;
+			span {
+				line-height: 130%;
+				vertical-align: middle;
+				display: table-cell;
+				font-family: 'Open Sans',sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+			
+		}
+
+		.radios input[type=radio]{
+			display:none
+		}
+
+		.radios input[type=radio]:checked + .radio{
+			background-color: @primary-color;
+			span {
+				color: white;
+			}
+		}
+	}
+}

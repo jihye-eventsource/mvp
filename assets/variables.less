@@ -1,0 +1,50 @@
+// Colors
+@disabled: #747678;
+@background-color: #F3F4F6;
+@background-color-dark: #F3F4F6 - #090909;
+@primary-color: #FF6346;
+@primary-color-dark: @primary-color - #211;
+@text-strong: #3D454D;
+@gray: #737476;
+@gray-light: @gray + #222;
+@gray-dark: @gray - #222;
+@text-big: 18px;
+
+
+
+//== Media queries breakpoints, taken from bootstrap
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+// Extra small screen / phone
+@screen-xs: 767px;
+// Small screen / tablet
+@screen-sm: 768px;
+// Medium screen / desktop
+@screen-md: 992px;
+// Large screen / wide desktop
+@screen-lg: 1200px;
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max: (@screen-sm - 1);
+@screen-sm-max: (@screen-md - 1);
+@screen-md-max: (@screen-lg - 1);
+@phone: ~"screen and (max-width: @{screen-xs})";
+@phone-and-tablet: ~"screen and (max-width: @{screen-sm-max})";
+@tablet: ~"screen and (min-width: @{screen-sm})";
+@tablet-strict: ~"screen and (min-width: @{screen-sm}) and (max-width: @{screen-sm-max})";
+@desktop: ~"screen and (min-width: @{screen-md})";
+@desktop-strict: ~"screen and (min-width: @{screen-md}) and (max-width: @{screen-md-max})";
+@large: ~"screen and (min-width: @{screen-lg})";
+@print: ~"print";
+
+/** Usage example
+footer{
+    width: 10px;
+    @media @phone {
+        padding: 3px;
+    }
+    @media @tablet {
+        padding: 6px;
+    }
+}
+*/
+
+//== End of media queries
