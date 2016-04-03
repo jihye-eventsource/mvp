@@ -297,7 +297,7 @@ footer .footer-bottom {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(20, 20, 20, 0.45);
   z-index: 2;
 }
 .image .image-overlay .tile-grid {
@@ -345,6 +345,7 @@ footer .footer-bottom {
   color: #fff;
 }
 .hero-area .hero-area-background {
+  background-image: url("../image/festival-b.png");
   -moz-transition: height 1s ease-in-out;
   transition: height 1s ease-in-out;
   background-size: cover;
@@ -352,7 +353,7 @@ footer .footer-bottom {
   background-repeat: no-repeat;
 }
 .hero-area .hero-area-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   overflow: hidden;
   height: 100%;
   z-index: 2;
@@ -404,7 +405,7 @@ footer .footer-bottom {
   background-repeat: no-repeat;
 }
 .overlay-area .overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   overflow: hidden;
   height: 100%;
   z-index: 2;
@@ -430,4 +431,46 @@ footer .footer-bottom {
 }
 .overlay-area .overlay-heading p {
   font-size: 20px;
+}
+#image-venue {
+  background-image: url("../image/gallery/venuehire.jpg") !important;
+}
+#image-marquee {
+  background-image: url("../image/gallery/marquee.jpg") !important;
+}
+#image-toilet {
+  background-image: url("../image/gallery/toilet1.png") !important;
+}
+#image-catering {
+  background-image: url("../image/gallery/catering.jpg") !important;
+}
+#image-lighting {
+  background-image: url("../image/gallery/lighting1.jpg") !important;
+}
+#image-av {
+  background-image: url("../image/gallery/av.png") !important;
+}
+#image-wedding {
+  background-image: url("../image/gallery/wedding.png") !important;
+}
+#image-photographer {
+  background-image: url("../image/gallery/Photographer2.png") !important;
+}
+#image-furniture {
+  background-image: url("../image/gallery/furniture.png") !important;
+}
+#image-florist {
+  background-image: url("../image/gallery/florist.jpg") !important;
+}
+#image-stylist {
+  background-image: url("../image/gallery/stylist.jpg") !important;
+}
+#image-fencing {
+  background-image: url("../image/gallery/fencing.png") !important;
+}
+#image-suit {
+  background-image: url("../image/gallery/suit.png") !important;
+}
+#image-live {
+  background-image: url("../image/gallery/band.png") !important;
 }
