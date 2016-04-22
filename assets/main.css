@@ -238,6 +238,8 @@ footer .footer-bottom {
   line-height: 1.4em;
 }
 .funnel-modal form .funnel-button {
+  margin-top: 38px;
+  margin-bottom: 38px;
   min-width: 260px;
 }
 .funnel-modal form .funnel-input {
@@ -316,6 +318,32 @@ footer .footer-bottom {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-size: 20px;
+}
+.modal-progressbar {
+  border-top: 1px solid #e5e5e5;
+  background-color: #FF6346;
+  height: 120px;
+  position: relative;
+}
+.modal-progressbar .progressbar-overlay-progress {
+  width: 50%;
+  text-align: center;
+  color: white;
+}
+.modal-progressbar .progressbar-percent-bar {
+  height: 100%;
+  background-color: #dd5235;
+}
+.modal-progressbar .progressbar-overlay-progress label {
+  position: absolute;
+  font-size: 1.6rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 400;
 }
 .image-gallery .image-gallery-item {
   background-image: url("http://cdn.porch.com/bootstrap/0web/landingpages/desktop/porch_assist_plumber1_opt.jpg");

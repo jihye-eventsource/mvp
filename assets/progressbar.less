@@ -1,0 +1,32 @@
+.modal-progressbar {
+
+	border-top: 1px solid #e5e5e5;
+	background-color: @primary-color;
+	height: 120px;
+	position: relative;
+
+	.progressbar-overlay-progress {
+		width: 50%;
+		text-align: center;		
+		color: white;
+	}
+
+	.progressbar-percent-bar {
+		height: 100%;
+		background-color: @primary-color-dark;
+	}
+
+	.progressbar-overlay-progress {
+		label {
+			position: absolute;
+			font-size: 1.6rem;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%,-50%);
+			-moz-transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+			font-weight: 400;
+		}
+	}
+}
