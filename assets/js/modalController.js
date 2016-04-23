@@ -28,6 +28,7 @@ function generateModals(data){
 	questionCount = data.TotalCount;
 	questions = data.Questions;
 	questionCount = questions.length;
+	setProgress();
 	for (var i = 0; i<questions.length; i++){
 		if(questions[i].Type == ("SingleWText")){
 			generateSingleModal(questions[i]);
@@ -62,8 +63,8 @@ function previousQuestion(){
 function setProgress(){
 	progress = (currentQuestion/questionCount * 100).toFixed(0);	
 	var progressString = progress + "% completed";
-	document.getElementById("progBar").innerHTML = progressString;
-	console.log(document.getElementById("progBar").innerHTML);
+	//document.getElementById("progBar").width = progress;
+	document.getElementById("progBarText").innerHTML = progressString;
 }
 
 //============= General functions for all modal generators =============
