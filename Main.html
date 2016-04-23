@@ -403,7 +403,7 @@
               <div class="funnel-input radios">
                 <div class="radio-wrapper">
                   <input type="radio" name="rGroup" value="1" id="r1" checked="checked" />
-                  <label class="radio" for="r1"><span>Musical</span></label>
+                  <label class="radio" for="r1" id="musical" onclick="loadJSON(this)"><span>Musical</span></label>
                 </div>
                 <div class="radio-wrapper">
                   <input type="radio" name="rGroup" value="2" id="r2" />
@@ -448,10 +448,11 @@
 
       </div>
     </div>
-    <script src="assets/js/"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="modalController.js"></script>
   </body>
   </html>
