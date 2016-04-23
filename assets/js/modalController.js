@@ -13,7 +13,7 @@ $(document).ready( function(){
 });
 
 function loadJSON(eventType){
-	$.getJSON("questionFiles/" + eventType.id + ".json", function(data){
+	$.getJSON("assets/jsonFiles/" + eventType.id + ".json", function(data){
 		QuestionData=data;
 		generateModals(data);
 
@@ -60,7 +60,10 @@ function previousQuestion(){
 }
 
 function setProgress(){
-	progress = currentQuestion/questionCount * 100;	
+	progress = (currentQuestion/questionCount * 100).toFixed(0);	
+	var progressString = progress + "% completed";
+	document.getElementById("progBar").innerHTML = progressString;
+	console.log(document.getElementById("progBar").innerHTML);
 }
 
 //============= General functions for all modal generators =============
@@ -76,15 +79,24 @@ function generateModalEnding(){
 //============= Functions for generating single answer modals (no textbox)=============
 function generateSingleModal(q){
 	var innerHTML = "<form>";
-	innerHTML = innerHTML + generateModalTitle(q.Question);
+	innerHTML = innerHTML + generateModalTitle(q.Question);	
+	innerHTML = innerHTML + "<div class=\"funnel-input radios\">";
+	for(var i = 0; i<q.Choices.length; i++){
+		innerHTML = innerHTML + generateSingleAnswer(q.Choices[i], i);
+	}
+	innerHTML = innerHTML + "<div class=\"funnel-input radios\">";
 	innerHTML = innerHTML + generateModalEnding();
 	questionInnerHTML.push(innerHTML);
 }
 
 
-function generateSingleAnswer(answer){
+function generateSingleAnswer(answer,number){
 	//NEED TO CHANGE RADIO BUTTON IDS TO BE UNIQUE
-	var x ="<div class=\"radio-wrapper\"><input type=\"radio\" name=\"rGroup\" value=\"6\" id=\"r6\" /><label class=\"radio\" for=\"r6\"><span>"+ answer + "</span></label></div>";
+
+	var x ="<div class=\"radio-wrapper\">"
+	x = x + "<input type=\"radio\" name=\""+ QuestionData.Name+ questions[currentQuestion].OrderId +"\" value=\""+ number +"\" id=\"r" + number + "\" />"
+	x = x + "<label class=\"radio\" for=\"r"+number+"\"><span>"+ answer + "</span></label></div>";
+	return x;
 }
 
 //============= Functions for generating other modals=============
