@@ -391,73 +391,12 @@
     <!-- Modal - HTML Temlplates -->
     <div id="myModal" class="modal fade funnel-modal" role="dialog">
       <div class="modal-dialog">
-        <!-- Hidden input -->
-        <!-- Modal content-->
-        <div class="modal-content" id="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <h4 class="funnel-title">Looks like you need a <span class="funnel-name">dragon dance</span>. We've got you covered.</br>What kind of event?</h4>
-              <div class="funnel-input radios">
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="1" id="r1" checked="checked" />
-                  <label class="radio" for="r1" id="musical" onclick="loadJSON(this)"><span>Musical</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="2" id="r2" />
-                  <label class="radio" for="r2" id="sporting" onclick="loadJSON(this)"><span>Sporting</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="3" id="r3" />
-                  <label class="radio" for="r3"><span>Wedding</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="4" id="r4" checked="checked" />
-                  <label class="radio" for="r4"><span>Corporate / Business</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="5" id="r5" />
-                  <label class="radio" for="r5"><span>Party</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="6" id="r6" />
-                  <label class="radio" for="r6"><span>School</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="7" id="r7" />
-                  <label class="radio" for="r7"><span>Film</span></label>     
-                </div>
-                <div class="radio-wrapper">         
-                  <input type="radio" name="rGroup" value="8" id="r8" />
-                  <label class="radio" for="r8"><span>Other (Please Specify)</span></label>    
-                </div>
-              </div>
-              <div class="funnel-buttons">
-                <button type="button" class="btn btn-default next-button" data-dismiss="modal">Continue</button>
-                <p><a class="previous-button">Previous Question</a></p>
-              </div>
-            </form>
-          </div>
-          <div class="modal-progressbar">
-            <div class="progressbar-percent-bar"></div>
-            <div class="progressbar-overlay-progress">
-              <label>15% Completed</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="myModal2" class="modal fade funnel-modal" role="dialog">
-      <div class="modal-dialog">
-        <!-- Hidden input -->
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" id = "modal-body">
             <form>
               <h4 class="funnel-title">Looks like you need a <span class="funnel-name">dragon dance</span>. We've got you covered.</br>What kind of event?</h4>
               <div class="funnel-input radios">
@@ -495,8 +434,8 @@
                 </div>
               </div>
               <div class="funnel-buttons">
-                <button type="button" class="btn btn-default next-button" data-dismiss="modal">Continue</button>
-                <p><a class="previous-button">Previous Question</a></p>
+                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
+                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
               </div>
             </form>
           </div>
