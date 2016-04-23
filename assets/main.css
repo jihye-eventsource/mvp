@@ -252,6 +252,8 @@ footer .footer-bottom {
 .funnel-modal form .funnel-buttons .previous-button {
   padding-top: 12px;
   padding-bottom: 12px;
+  cursor: pointer;
+  cursor: hand;
 }
 .funnel-modal form .funnel-input {
   max-width: 800px;

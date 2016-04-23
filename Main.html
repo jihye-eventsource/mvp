@@ -391,23 +391,22 @@
     <!-- Modal - HTML Temlplates -->
     <div id="myModal" class="modal fade funnel-modal" role="dialog">
       <div class="modal-dialog">
-        <!-- Hidden input -->
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" id = "modal-body">
             <form>
               <h4 class="funnel-title">Looks like you need a <span class="funnel-name">dragon dance</span>. We've got you covered.</br>What kind of event?</h4>
               <div class="funnel-input radios">
                 <div class="radio-wrapper">
                   <input type="radio" name="rGroup" value="1" id="r1" checked="checked" />
-                  <label class="radio" for="r1"><span>Musical</span></label>
+                  <label class="radio" for="r1" id="musical" onclick="loadJSON(this)"><span>Musical</span></label>
                 </div>
                 <div class="radio-wrapper">
                   <input type="radio" name="rGroup" value="2" id="r2" />
-                  <label class="radio" for="r2"><span>Sporting</span></label>
+                  <label class="radio" for="r2" id="sporting" onclick="loadJSON(this)"><span>Sporting</span></label>
                 </div>
                 <div class="radio-wrapper">
                   <input type="radio" name="rGroup" value="3" id="r3" />
@@ -435,8 +434,8 @@
                 </div>
               </div>
               <div class="funnel-buttons">
-                <button type="button" class="btn btn-default next-button" data-dismiss="modal">Continue</button>
-                <p><a class="previous-button">Previous Question</a></p>
+                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
+                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
               </div>
             </form>
           </div>
@@ -498,8 +497,8 @@
                 <textarea class="text-input radio-other-text-input content" placeholder="Please explain"></textarea>
               </div>
               <div class="funnel-buttons">
-                <button type="button" class="btn btn-default next-button" data-dismiss="modal">Continue</button>
-                <p><a class="previous-button">Previous Question</a></p>
+                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
+                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
               </div>
             </form>
           </div>
@@ -524,5 +523,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="modalController.js"></script>
   </body>
   </html>
