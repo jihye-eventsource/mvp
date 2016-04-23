@@ -442,7 +442,7 @@
           <div class="modal-progressbar">
             <div class="progressbar-percent-bar"></div>
             <div class="progressbar-overlay-progress">
-              <label>15% Completed</label>
+              <label id="progBar">15% Completed</label>
             </div>
           </div>
         </div>
@@ -462,11 +462,11 @@
               <div class="funnel-input radios">
                 <div class="radio-wrapper">
                   <input type="radio" name="rGroup2" value="1" id="r12" checked="checked" />
-                  <label class="radio" for="r12"><span>Musical</span></label>
+                  <label class="radio" for="r12" id="musical" onclick="loadJSON(this)"><span>Musical</span></label>
                 </div>
                 <div class="radio-wrapper">
                   <input type="radio" name="rGroup2" value="2" id="r22" />
-                  <label class="radio" for="r22"><span>Sporting</span></label>
+                  <label class="radio" for="r22" id="sporting" onclick="loadJSON(this)"><span>Sporting</span></label>
                 </div>
                 <div class="radio-wrapper">
                   <input type="radio" name="rGroup2" value="3" id="r32" />
