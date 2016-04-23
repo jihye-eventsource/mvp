@@ -3,6 +3,7 @@ var questionCount = 0;
 var currentQuestion = 0;
 var progress = 0;
 var question_Modal_Map{};
+var defaultQuestion;
 
 $(document).ready( function(){
 	
@@ -16,6 +17,8 @@ function loadJSON(eventType){
 }
 
 function generateModals(data){
+	defaultQuestion = document.getElementById("modal-content").innerHTML;
+
 	questionCount = data.TotalCount;
 	questions = data.Questions;
 	questionCount = questions.length;
