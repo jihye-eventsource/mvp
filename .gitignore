@@ -27,3 +27,4 @@ Thumbs.db
 /_ignored/*
 /node_modules/*
 /bower_components/*
+assets/main.css
