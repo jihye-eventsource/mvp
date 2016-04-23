@@ -3,6 +3,9 @@
 		min-width: 80%;
 		text-align: center;
 	}
+	button.close {
+		font-size: 2em;
+	}
 	form {
 		.funnel-title {
 			font-size: 32px;
@@ -10,12 +13,19 @@
 			font-weight: 300;
 			line-height: 1.4em;
 		}
-		.funnel-button {
-			margin-top: 38px;
-			margin-bottom: 38px;
-			min-width: 260px;
+		.funnel-buttons {
+			margin-top: 12px;
+			margin-bottom: 12px;
+			.next-button {
+				margin-top: 12px;
+				margin-bottom: 12px;
+				min-width: 260px;
+			}
+			.previous-button {
+				padding-top: 12px;
+				padding-bottom: 12px;
+			}
 		}
-
 		.funnel-input {
 			max-width: 800px;
 			padding-right: 15px;
@@ -50,13 +60,10 @@
 				font-weight: 400;
 				font-style: normal;
 			}
-			
 		}
-
 		.radios input[type=radio]{
 			display:none
 		}
-
 		.radios input[type=radio]:checked + .radio{
 			background-color: @primary-color;
 			span {

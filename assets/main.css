@@ -231,16 +231,27 @@ footer .footer-bottom {
   min-width: 80%;
   text-align: center;
 }
+.funnel-modal button.close {
+  font-size: 2em;
+}
 .funnel-modal form .funnel-title {
   font-size: 32px;
   font-style: normal;
   font-weight: 300;
   line-height: 1.4em;
 }
-.funnel-modal form .funnel-button {
-  margin-top: 38px;
-  margin-bottom: 38px;
+.funnel-modal form .funnel-buttons {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.funnel-modal form .funnel-buttons .next-button {
+  margin-top: 12px;
+  margin-bottom: 12px;
   min-width: 260px;
+}
+.funnel-modal form .funnel-buttons .previous-button {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .funnel-modal form .funnel-input {
   max-width: 800px;
@@ -322,7 +333,7 @@ footer .footer-bottom {
 .modal-progressbar {
   border-top: 1px solid #e5e5e5;
   background-color: #FF6346;
-  height: 120px;
+  height: 100px;
   position: relative;
 }
 .modal-progressbar .progressbar-overlay-progress {
