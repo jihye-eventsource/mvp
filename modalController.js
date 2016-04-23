@@ -6,13 +6,18 @@ $(document).ready( function(){
 });
 
 function loadJSON(eventType){
-	console.log(eventType.id);
+	$.getJSON("questionFiles/" + eventType.id + ".json", function(data){
+		generateModals(data);
+
+	});
 
 
 }
 
-function generateModals(){
-
+function generateModals(data){
+	console.log(data);
+	Questions = data.Questions;
+	for (int i = 0; )
 }
 
 function nextQuestion(){
