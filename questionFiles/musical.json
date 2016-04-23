@@ -1,8 +1,7 @@
 {
-	"Name":"Musical",
-	"TotalCount":"3",
+	"Name":"musical",
 	"Questions":[
-		{	"OrderId":"1",
+		{	"OrderId":1,
 			"Type":"Single",
 			"Question":"FirstQuestion?",
 			"Choices":["choice1","choice2","choice3","choice4"],
@@ -11,7 +10,7 @@
 			"Answer":[],
 			"GACode":""
 		},
-		{	"OrderId":"2",
+		{	"OrderId":2,
 			"Type":"multi",
 			"Question":"second?",
 			"Choices":[],
@@ -20,10 +19,10 @@
 			"Answer":[],
 			"GACode":""
 		},
-		{	"OrderId":"3",
+		{	"OrderId":3,
 			"Type":"calendar",
 			"Question":"third?",
-			"Choices":[],
+			"Choices":["1","2","3"],
 			"ButtonFowardText":"finish",
 			"ButtonBackwardText":"back",
 			"Answer":[],
