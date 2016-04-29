@@ -1,8 +1,8 @@
 {
-	"Name":"musical",
+	"Name":"Portable Toilets",
 	"Questions":[
 		{	"OrderId":1,
-			"Type":"SingleWText",
+			"Type":"Single",
 			"Question":"FirstQuestion?",
 			"Choices":["choice1","choice2","choice3","choice4"],
 			"ButtonFowardText":"continue",
@@ -11,19 +11,10 @@
 			"GACode":""
 		},
 		{	"OrderId":2,
-			"Type":"SingleWText",
+			"Type":"multi",
 			"Question":"second?",
-			"Choices":["fdasfd"],
+			"Choices":[],
 			"ButtonFowardText":"continue",
-			"ButtonBackwardText":"back",
-			"Answer":[],
-			"GACode":""
-		},
-		{	"OrderId":3,
-			"Type":"SingleWText",
-			"Question":"third?",
-			"Choices":["1","2","3"],
-			"ButtonFowardText":"finish",
 			"ButtonBackwardText":"back",
 			"Answer":[],
 			"GACode":""

@@ -1,0 +1,7 @@
+{
+	"EventTypes": ["AVEquipment",
+		"Lighting",
+		"LiveEntertainment",
+		"Florists"
+	]
+}
