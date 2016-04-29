@@ -19,6 +19,10 @@
   <!-- Open Sans -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
+  <!-- Fonts -->
+  <!-- Compiled Styles -->
+  <link rel="stylesheet" type="text/css" href="image/icons/font/flaticon.css"> 
+
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -87,7 +91,7 @@
     <section class="container image-gallery">
       <div class="row">
         <div class="col-sm-3">
-          <a href="#" data-toggle="modal" data-target="#myModal2">
+          <a href="#" data-toggle="modal" data-target="#modal-SingleSelectOther">
             <figure class="image-gallery-item image" id="image-venue">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -98,7 +102,7 @@
           </a>
         </div>
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#modal-Date">
             <figure class="image-gallery-item image" id="image-marquee">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -259,22 +263,20 @@
     </section>
     <div class="container">
     </div>
-    <section class="container section-heading">
-      <h2>How EventSource Works</h2>
-    </section>
-    <section class="section-filled section-info">
+    <section class="section-filled white section-info" style="margin-top: 60px">
       <div class="container">
+        <h2>How EventSource Works</h2>
         <div class="row">
           <div class="col-md-4">
-            <i class="fa fa-users fa-large"></i>
+            <i class="flaticon-contract"></i>
             <p>Post your event for free & tell us what you need</p>
           </div>
           <div class="col-md-4">
-            <i class="fa fa-line-chart fa-large"></i>
+            <i class="flaticon-businessmen"></i>
             <p>Sit back & relax while suppliers send you quotes</p>
           </div>
           <div class="col-md-4">
-            <i class="fa fa-thumbs-o-up fa-large"></i>
+            <i class="flaticon-agreement"></i>
             <p>Select your favourite quote & Enjoy your event!</p>
           </div>
         </div>
@@ -300,7 +302,7 @@
                 </div>
               </figure>
               <div class="testimonial-body">
-                <p>"We are tenants and have moved every 6-12 months. Over the 30yrs of our marriage we have found it difficult to hire businesses that we can trust with our antique furniture. But with Oneflare's help we can now be confident that we are hiring quality businesses."
+                <p>"We were flying down to Queenstown to have our wedding, but had no clue as to where to start organizing. EventSource helped us get connected with local event hire businesses, and we pulled off a fantastic wedding!"
                 </p>
               </div>
             </div>
@@ -312,7 +314,7 @@
                 </div>
               </figure>
               <div class="testimonial-body">
-                <p>"My husband and I wanted to repaint the wall of the kids room. I found Oneflare and I loved the idea of receiving quotes without doing anything. We hired Andrew who completed the entire room quickly. Now, the room feels a lot bigger and brighter."
+                <p>"Our business wanted to hold a party for client in a week's notice. EventSource helped us find us secure suitable venue and connected us with catering, security and everything we needed in the short notice"
                 </p>
               </div>
             </div>
@@ -324,7 +326,7 @@
                 </div>
               </figure>
               <div class="testimonial-body">
-                <p>"Our home needed some major plumbing work done. Oneflare made my life a lot easier because I really didn't know where to start or which plumber to contact. After putting up a request I was in touch with plumbers and the work was done in no time."
+                <p>"Our Marketing firm plans and organises branding events for corporate events. EventSource is our 'go to' partner for sourcing quotes from both preferred and public event hire businesses"
                 </p>
               </div>
             </div>
@@ -448,7 +450,73 @@
         </div>
       </div>
     </div>
-    <div id="myModal2" class="modal fade funnel-modal" role="dialog">
+    <div id="modal-SingleSelectOther" class="modal fade funnel-modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Hidden input -->
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <h4 class="funnel-title">Looks like you need a <span class="funnel-name">dragon dance</span>. We've got you covered.</br>What kind of event?</h4>
+              <div class="funnel-input radios">
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="1" id="r12" checked="checked" />
+                  <label class="radio" for="r12" id="musical" onclick="loadJSON(this)"><span>Musical</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="2" id="r22" />
+                  <label class="radio" for="r22" id="sporting" onclick="loadJSON(this)"><span>Sporting</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="3" id="r32" />
+                  <label class="radio" for="r32"><span>Wedding</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="4" id="r42" checked="checked" />
+                  <label class="radio" for="r42"><span>Corporate / Business</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="5" id="r52" />
+                  <label class="radio" for="r52"><span>Party</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="6" id="r62" />
+                  <label class="radio" for="r62"><span>School</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="7" id="r72" />
+                  <label class="radio" for="r72"><span>Film</span></label>     
+                </div>
+                <div class="radio-wrapper">         
+                  <input type="radio" name="rGroup2" value="8" id="r82" class="trigger" data-rel="radio-other-text-input" />
+                  <label class="radio" for="r82"><span>Other (Please Specify)</span></label>    
+                </div>
+              </div>
+              <div class="funnel-input">
+                <textarea class="text-input radio-other-text-input content" placeholder="Please explain"></textarea>
+              </div>
+              <div class="funnel-buttons">
+                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
+                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
+              </div>
+            </form>
+          </div>
+          <div class="modal-progressbar">
+            <div class="progressbar-percent-bar"></div>
+            <div class="progressbar-overlay-progress">
+              <label>15% Completed</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div id="modal-Date" class="modal fade funnel-modal" role="dialog">
       <div class="modal-dialog">
         <!-- Hidden input -->
         <!-- Modal content-->
