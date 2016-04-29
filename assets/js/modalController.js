@@ -9,25 +9,34 @@ var defaultQuestion;
 var answers = [];
 
 $(document).ready( function(){
-	
+	defaultQuestion = document.getElementById("modal-body").innerHTML;
+});
+
+$("#myModal").on('hidden.bs.modal', function(){
+	document.getElementById("modal-body").innerHTML = defaultQuestion;
+	questionInnerHTML = [];
+	currentQuestion = 0;
 });
 
 function loadJSON(eventType){
 	$.getJSON("assets/jsonFiles/" + eventType.id + ".json", function(data){
 		QuestionData=data;
 		generateModals(data);
-
 	});
 }
 
 function generateModals(data){
-	defaultQuestion = document.getElementById("modal-body").innerHTML;
 	questionInnerHTML = [];
 	questionInnerHTML.push(defaultQuestion);
+	document.getElementById("modal-body").innerHTML = questionInnerHTML[0];
+
+
 
 	questionCount = data.TotalCount;
 	questions = data.Questions;
 	questionCount = questions.length;
+	setProgress();
+	currentQuestion = 0;
 	for (var i = 0; i<questions.length; i++){
 		if(questions[i].Type == ("SingleWText")){
 			generateSingleModal(questions[i]);
@@ -62,8 +71,8 @@ function previousQuestion(){
 function setProgress(){
 	progress = (currentQuestion/questionCount * 100).toFixed(0);	
 	var progressString = progress + "% completed";
-	document.getElementById("progBar").innerHTML = progressString;
-	console.log(document.getElementById("progBar").innerHTML);
+	//document.getElementById("progBar").width = progress;
+	document.getElementById("progBarText").innerHTML = progressString;
 }
 
 //============= General functions for all modal generators =============
