@@ -99,6 +99,18 @@
       </div>
     </section>
     <section class="container section-heading">
+      <h3>Temporary buttons</h3>
+      <button href="#" data-toggle="modal" class="btn btn-default" data-target="#modal-SingleSelectOther">
+        Single Select (Other)
+      </button>
+      <button href="#" data-toggle="modal" class="btn btn-default" data-target="#modal-Date">
+        Date & Time
+      </button>
+      <button href="#" data-toggle="modal" class="btn btn-default" data-target="#modal-EmailAndContact">
+        Phone & Email
+      </button>
+    </section>
+    <section class="container section-heading">
       <h2>Find What You Need</h2>
       <p>Weddings / Parties / Public Events / Corporate Functions</p>
     </section>
@@ -506,8 +518,8 @@
                   <label class="radio" for="r82"><span>Other (Please Specify)</span></label>    
                 </div>
               </div>
-              <div class="funnel-input">
-                <textarea class="text-input radio-other-text-input content" placeholder="Please explain"></textarea>
+              <div class="funnel-input radio-other-text-input content">
+                <textarea class="text-input" placeholder="Please explain"></textarea>
               </div>
               <div class="funnel-buttons">
                 <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
@@ -540,7 +552,7 @@
               <h4 class="funnel-title">Do you know when your event will be on?</h4>
               <div class="funnel-input radios">
                 <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="3" id="ryes" class="trigger" data-rel="radio-other-text-input" />
+                  <input type="radio" name="rGroup2" value="3" id="ryes" class="trigger" data-rel="radio-yes-calendar" />
                   <label class="radio" for="ryes"><span>Yes</span></label>
                 </div>
                 <div class="radio-wrapper">
@@ -548,24 +560,70 @@
                   <label class="radio" for="rno"><span>Not yet</span></label>    
                 </div>
               </div>
-              <div class="funnel-input datetimepicker">
+              <div class="funnel-input datetimepicker radio-yes-calendar content">
                 <div style="overflow:hidden;">
                   <div class="form-group">
-                    <div class="row">
-                      <div class="col-md-8">
-                        <div id="datetimepicker12"></div>
-                      </div>
-                    </div>
+                    <div id="datetimepicker12"></div>
                   </div>
                   <script type="text/javascript">
                   $(function () {
                     $('#datetimepicker12').datetimepicker({
                       inline: true,
-                      sideBySide: true
+                      format: 'YYYY-MM-DD'
                     });
                   });
                   </script>
                 </div>
+              </div>
+              <div class="funnel-buttons">
+                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
+                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
+              </div>
+            </form>
+          </div>
+          <div class="modal-progressbar">
+            <div class="progressbar-percent-bar"></div>
+            <div class="progressbar-overlay-progress">
+              <label>15% Completed</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div id="modal-EmailAndContact" class="modal fade funnel-modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Hidden input -->
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <h4 class="funnel-title">Thank you. Finally, how do we contact you?</h4>
+              <div class="funnel-input">
+                <div class="row">
+                  <div class="form-group textbox col-sm-6">
+                    <input type="text" placeholder="First name"/>
+                  </div>
+                  <div class="form-group textbox col-sm-6">
+                    <input type="text" placeholder="Last name"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group textbox col-sm-6">
+                    <input type="email" placeholder="Email"/>
+                  </div>
+                  <div class="form-group textbox col-sm-6">
+                    <input type="tel" placeholder="Phone"/>
+                  </div>
+                </div>
+              </div>
+              <div class="funnel-buttons">
+                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Submit</button>
               </div>
             </form>
           </div>

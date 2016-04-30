@@ -6,6 +6,9 @@
 	button.close {
 		font-size: 2em;
 	}
+	.modal-body {
+		text-align: center;
+	}
 	form {
 		.content {
 			display: none;
@@ -88,8 +91,18 @@
 				color: white;
 			}
 		}
+		.textbox {
+			input {
+				width: 100%;
+				padding: 14px 20px;
+				height: 54px;
+			}
+		}
 		.datetimepicker {
-			
+			max-width: 400px;
+			.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+				background-color: @primary-color;
+			}
 		}
 	}
 }
