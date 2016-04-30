@@ -10,14 +10,32 @@
   <!-- Bootstrap -->
   <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 
+  <!-- Bootstrap DatePicker -->
+  <link href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+
   <!-- Font Awesome -->
   <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" />
 
   <!-- Compiled Styles -->
   <link href="assets/main.css" rel="stylesheet" />
 
+  <!-- Fonts -->
   <!-- Open Sans -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <!-- Compiled Styles -->
+  <link rel="stylesheet" type="text/css" href="image/icons/font/flaticon.css"> 
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- Include moment. js -->
+  <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+  <!-- Include Bootstrap Calendar -->
+  <script type="text/javascript" src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,15 +54,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">EventSource</a>
+          <a class="navbar-brand" href="Main.html">EventSource</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="#">How it Works</a></li>
+            <li><a href="How-It-Works.html">How it Works</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Register Business</a></li>
+            <li><a href="Register-Business.html">Register Business</a></li>
             <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
@@ -54,227 +72,34 @@
       <div class="hero-area-background">
         <div class="hero-area-overlay">
           <div class="container hero-area-padding">
-            <div class="row">
-              <div class="hero-area-heading col-md-7 col-lg-7">
-                <h1>The easiest way to source quotes for your event</h1>
-                <hr class="hidden-xs"/
-                <p class="hidden-xs"><em>Eventsource made event planning so easy and enabled me to enjoy my event instead of stressing</em> - Deon, Radio NZ Live</p>
-              </div>
-              <div class="col-md-5 col-lg-4 col-lg-offset-1">
-                <div class="cta-form-container">
-                  <form>
-                    <div class="form-group">
-                      <label>What do you need?</label>
-                      <input type="text" class="form-control" placeholder="E.g. Marquee, Florist, Stylist etc">
-                    </div>
-                    <div class="form-group">
-                      <label>Where do you need it?</label>                    
-                      <input type="text" class="form-control" placeholder="Auckland Central, etc...">
-                    </div>
-                    <button type="button" class="btn btn-default btn-block btn-lg" data-toggle="modal" data-target="#myModal">Source</button>
-                  </form>
-                </div>
-              </div>
+            <div class="hero-area-heading text-center">
+              <h1>Eventsource is your personal event hire marketplace.</h1>
+              <h2>Questions? Call us on 0800 10 33 32</h2>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="container section-heading">
-      <h2>Find What You Need</h2>
-      <p>Weddings / Parties / Public Events / Corporate Functions</p>
-    </section>
-    <section class="container image-gallery">
-      <div class="row">
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image" id="image-venue">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Venue</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image" id="image-marquee">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Marquee</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image" id="image-toilet">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Portable Toilet</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-catering">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Catering</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="container section-heading">
-      <h2>Popular Searches</h2>
-    </section>
-    <section class="container image-gallery">
-      <div class="row">
-        <div class="col-sm-6">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-wedding">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Wedding Planner</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-lighting">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Lighting</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-photographer">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Photographers</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-furniture">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Furniture</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-av">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">AV Equipment</figcaption>
-                </div>
-              </div>
-
-            </figure>
-          </a>
-        </div>
-        
-
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-suit">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Suit & Dress Hire</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-stylist">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Stylist</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-florist">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Florists</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-fencing">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Temporary Fencing</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-
-        <div class="col-sm-6">
-          <a href="#">
-            <figure class="image-gallery-item image"  id="image-live">
-              <div class="image-gallery-overlay image-overlay">
-                <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Live Entertainment</figcaption>
-                </div>
-              </div>
-            </figure>
-          </a>
-        </div>
-      </div>      
-    </section>
-    <div class="container">
-    </div>
-    <section class="container section-heading">
-      <h2>How EventSource Works</h2>
-    </section>
-    <section class="section-filled section-info">
+    <section class="section-filled section-info" style="margin-top: 60px">
       <div class="container">
+        <h2>Organizing events doesn't have to be a journey.</h2>  
+        <p class="text-big">Pulling off an event - be it a personal celebration, a business function or a corporate event - can be a journey. Planning and imagining your event is exciting; however, trying to organize the different components requires and negotiating with hire companies can take all the fun part of realizing your event. EventSource asks you the right questions and provides you quotes for qualified, proven event services and hires. It takes the hassle out of organizating events, so you can concentrate on the fun parts; imagining your event, then enjoying your well-deserved celebration!</p>
+      </div>
+    </section>
+    <section class="section-filled white section-info" style="margin-top: 60px">
+      <div class="container">
+        <h2>How does Eventsource Work?</h2>  
         <div class="row">
           <div class="col-md-4">
-            <i class="fa fa-users fa-large"></i>
+            <i class="flaticon-contract"></i>
             <p>Post your event for free & tell us what you need</p>
           </div>
           <div class="col-md-4">
-            <i class="fa fa-line-chart fa-large"></i>
+            <i class="flaticon-businessmen"></i>
             <p>Sit back & relax while suppliers send you quotes</p>
           </div>
           <div class="col-md-4">
-            <i class="fa fa-thumbs-o-up fa-large"></i>
+            <i class="flaticon-agreement"></i>
             <p>Select your favourite quote & Enjoy your event!</p>
           </div>
         </div>
@@ -288,7 +113,7 @@
       </div>
     </section>
     <section class="container section-heading">
-      <h2>What Other Event Planners Have Said</h2>
+      <h2>Who uses EventSource?</h2>
     </section>
     <section class="section-testimonial">
       <div class="container">
@@ -300,7 +125,7 @@
                 </div>
               </figure>
               <div class="testimonial-body">
-                <p>"We are tenants and have moved every 6-12 months. Over the 30yrs of our marriage we have found it difficult to hire businesses that we can trust with our antique furniture. But with Oneflare's help we can now be confident that we are hiring quality businesses."
+                <p>"We were flying down to Queenstown to have our wedding, but had no clue as to where to start organizing. EventSource helped us get connected with local event hire businesses, and we pulled off a fantastic wedding!"
                 </p>
               </div>
             </div>
@@ -312,7 +137,7 @@
                 </div>
               </figure>
               <div class="testimonial-body">
-                <p>"My husband and I wanted to repaint the wall of the kids room. I found Oneflare and I loved the idea of receiving quotes without doing anything. We hired Andrew who completed the entire room quickly. Now, the room feels a lot bigger and brighter."
+                <p>"Our business wanted to hold a party for client in a week's notice. EventSource helped us find us secure suitable venue and connected us with catering, security and everything we needed in the short notice"
                 </p>
               </div>
             </div>
@@ -324,17 +149,40 @@
                 </div>
               </figure>
               <div class="testimonial-body">
-                <p>"Our home needed some major plumbing work done. Oneflare made my life a lot easier because I really didn't know where to start or which plumber to contact. After putting up a request I was in touch with plumbers and the work was done in no time."
+                <p>"Our Marketing firm plans and organises branding events for corporate events. EventSource is our 'go to' partner for sourcing quotes from both preferred and public event hire businesses"
                 </p>
               </div>
             </div>
           </div>
-
         </div>    
       </div>
     </section>
-    <section>
-    </section>   
+    <section class="section-filled white section-info" style="margin-top: 60px">
+      <div class="container">
+        <h2>How does Eventsource Work?</h2>  
+        <div class="row">
+          <div class="col-md-4">
+            <i class="flaticon-contract"></i>
+            <p>Post your event for free & tell us what you need</p>
+          </div>
+          <div class="col-md-4">
+            <i class="flaticon-businessmen"></i>
+            <p>Sit back & relax while suppliers send you quotes</p>
+          </div>
+          <div class="col-md-4">
+            <i class="flaticon-agreement"></i>
+            <p>Select your favourite quote & Enjoy your event!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container">
+            <button type="button" class="btn btn-default btn-lg">
+              Find out more
+            </button>
+          </div>
+        </div>
+      </div>
+    </section> 
     <footer id="footer" style="margin-top: 50px">
       <div class="footer-main">
         <div class="container">
@@ -388,19 +236,17 @@
       </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- Modal - HTML Temlplates -->
     <div id="myModal" class="modal fade funnel-modal" role="dialog">
       <div class="modal-dialog">
-
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" id = "modal-body">
             <form>
-              <h4 class="funnel-title">Looks like you need a home cleaner. We've got you covered.</br>What kind of event?</h4>
-
+              <h4 class="funnel-title">Looks like you need a <span class="funnel-name">dragon dance</span>. We've got you covered.</br>What kind of event?</h4>
               <div class="funnel-input radios">
                 <div class="radio-wrapper">
                   <input type="radio" name="rGroup" value="1" id="r1" checked="checked" />
@@ -435,19 +281,207 @@
                   <label class="radio" for="r8"><span>Other (Please Specify)</span></label>    
                 </div>
               </div>
-              
-              <button type="button" class="btn btn-default funnel-button" data-dismiss="modal">Continue</button>
+              <div class="funnel-buttons">
+                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
+                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
+              </div>
             </form>
           </div>
-          <div class="modal-footer">
+          <div class="modal-progressbar">
+            <div class="progressbar-percent-bar" id = "progBar"></div>
+            <div class="progressbar-overlay-progress">
+              <label id="progBarText">15% Completed</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-SingleSelectOther" class="modal fade funnel-modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Hidden input -->
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <h4 class="funnel-title">Looks like you need a <span class="funnel-name">dragon dance</span>. We've got you covered.</br>What kind of event?</h4>
+              <div class="funnel-input radios">
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="1" id="r12" checked="checked" />
+                  <label class="radio" for="r12"><span>Musical</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="2" id="r22" />
+                  <label class="radio" for="r22"><span>Sporting</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="3" id="r32" />
+                  <label class="radio" for="r32"><span>Wedding</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="4" id="r42" checked="checked" />
+                  <label class="radio" for="r42"><span>Corporate / Business</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="5" id="r52" />
+                  <label class="radio" for="r52"><span>Party</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="6" id="r62" />
+                  <label class="radio" for="r62"><span>School</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="7" id="r72" />
+                  <label class="radio" for="r72"><span>Film</span></label>     
+                </div>
+                <div class="radio-wrapper">         
+                  <input type="radio" name="rGroup2" value="8" id="r82" class="trigger" data-rel="radio-other-text-input" />
+                  <label class="radio" for="r82"><span>Other (Please Specify)</span></label>    
+                </div>
+              </div>
+              <div class="funnel-input radio-other-text-input content">
+                <textarea class="text-input" placeholder="Please explain"></textarea>
+              </div>
+              <div class="funnel-buttons">
+                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
+                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
+              </div>
+            </form>
+          </div>
+          <div class="modal-progressbar">
+            <div class="progressbar-percent-bar"></div>
+            <div class="progressbar-overlay-progress">
+              <label>15% Completed</label>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+
+    <div id="modal-Date" class="modal fade funnel-modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Hidden input -->
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <h4 class="funnel-title">Do you know when your event will be on?</h4>
+              <div class="funnel-input radios">
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="3" id="ryes" class="trigger" data-rel="radio-yes-calendar" />
+                  <label class="radio" for="ryes"><span>Yes</span></label>
+                </div>
+                <div class="radio-wrapper">
+                  <input type="radio" name="rGroup2" value="8" id="rno" />
+                  <label class="radio" for="rno"><span>Not yet</span></label>    
+                </div>
+              </div>
+              <div class="funnel-input datetimepicker radio-yes-calendar content">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <p class="text-big">Start Date</p>
+                    <div id="datetimepicker12"></div>
+                  </div>
+                  <script type="text/javascript">
+                  $(function () {
+                    $('#datetimepicker12').datetimepicker({
+                      inline: true,
+                      format: 'YYYY-MM-DD'
+                    });
+                  });
+                  </script>
+                  <div class="form-group col-md-6">
+                    <p class="text-big">End Date</p>
+                    <div id="datetimepicker13"></div>
+                  </div>
+                  <script type="text/javascript">
+                  $(function () {
+                    $('#datetimepicker13').datetimepicker({
+                      inline: true,
+                      format: 'YYYY-MM-DD'
+                    });
+                  });
+                  </script>
+                </div>
+              </div>
+              <div class="funnel-buttons">
+                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
+                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
+              </div>
+            </form>
+          </div>
+          <div class="modal-progressbar">
+            <div class="progressbar-percent-bar"></div>
+            <div class="progressbar-overlay-progress">
+              <label>15% Completed</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div id="modal-EmailAndContact" class="modal fade funnel-modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Hidden input -->
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <h4 class="funnel-title">Thank you. Finally, how do we contact you?</h4>
+              <div class="funnel-input">
+                <div class="row">
+                  <div class="form-group textbox col-sm-6">
+                    <input type="text" placeholder="First name"/>
+                  </div>
+                  <div class="form-group textbox col-sm-6">
+                    <input type="text" placeholder="Last name"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group textbox col-sm-6">
+                    <input type="email" placeholder="Email"/>
+                  </div>
+                  <div class="form-group textbox col-sm-6">
+                    <input type="tel" placeholder="Phone"/>
+                  </div>
+                </div>
+              </div>
+              <div class="funnel-buttons">
+                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-progressbar">
+            <div class="progressbar-percent-bar"></div>
+            <div class="progressbar-overlay-progress">
+              <label>15% Completed</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Modal - Generated -->
+    <div id="generated-questions">
+
+
+    </div>
+    <!-- Modal - Generated End -->
+
+
+    <script src="assets/js/modalController.js"></script>
+    <script src="assets/js/modalActionHandler.js"></script>
   </body>
   </html>
