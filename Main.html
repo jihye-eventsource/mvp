@@ -547,16 +547,16 @@
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" id="calendar-modal-body">
             <form>
               <h4 class="funnel-title">Do you know when your event will be on?</h4>
               <div class="funnel-input radios">
                 <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="3" id="ryes" class="trigger" data-rel="radio-yes-calendar" />
+                  <input type="radio" name="rGroup2" value="yes" id="ryes" class="trigger" data-rel="radio-yes-calendar" />
                   <label class="radio" for="ryes"><span>Yes</span></label>
                 </div>
                 <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="8" id="rno" />
+                  <input type="radio" name="rGroup2" value="not-yet" id="rno" />
                   <label class="radio" for="rno"><span>Not yet</span></label>    
                 </div>
               </div>
@@ -614,7 +614,7 @@
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" id="contact-modal-body">
             <form>
               <h4 class="funnel-title">Thank you. Finally, how do we contact you?</h4>
               <div class="funnel-input">
@@ -657,8 +657,8 @@
     </div>
     <!-- Modal - Generated End -->
 
-
-    <script src="assets/js/modalController.js"></script>
     <script src="assets/js/modalActionHandler.js"></script>
+    <script src="assets/js/modalController.js"></script>
+
   </body>
   </html>
