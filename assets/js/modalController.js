@@ -36,9 +36,8 @@ function resetAll(){
 
 function generateModals(data){
 	generateTextBoxes
-	questionCount = data.TotalCount;
 	questions = data.Questions;
-	questionCount = questions.length;
+	questionCount = questions.length -1 ;
 	setProgress();
 	for (var i = 0; i<questions.length; i++){
 		if(questions[i].Type == ("SingleWText")){
