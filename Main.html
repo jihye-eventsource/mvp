@@ -105,29 +105,29 @@
     <section class="container image-gallery">
       <div class="row">
         <div class="col-sm-3">
-          <a href="#" data-toggle="modal" data-target="#modal-SingleSelectOther">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image" id="image-venue">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Venue</figcaption>
+                  <figcaption class="tile-grid-itemTitle" id="venue" onclick="loadJSON(this)">Venue</figcaption>
                 </div>
               </div>
             </figure>
           </a>
         </div>
         <div class="col-sm-3">
-          <a href="#" data-toggle="modal" data-target="#modal-Date">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image" id="image-marquee">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
-                  <figcaption class="tile-grid-itemTitle">Marquee</figcaption>
+                  <figcaption class="tile-grid-itemTitle" id="marquee" onclick="loadJSON(this)">Marquee</figcaption>
                 </div>
               </div>
             </figure>
           </a>
         </div>
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image" id="image-toilet">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -138,7 +138,7 @@
           </a>
         </div>
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-catering">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -156,7 +156,7 @@
     <section class="container image-gallery">
       <div class="row">
         <div class="col-sm-6">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-wedding">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -167,7 +167,7 @@
           </a>
         </div>
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-lighting">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -178,7 +178,7 @@
           </a>
         </div>
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-photographer">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -191,7 +191,7 @@
       </div>
       <div class="row">
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-furniture">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -202,7 +202,7 @@
           </a>
         </div>
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-av">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -213,10 +213,8 @@
             </figure>
           </a>
         </div>
-        
-
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-suit">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -227,7 +225,7 @@
           </a>
         </div>
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-stylist">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -240,7 +238,7 @@
       </div>
       <div class="row">
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-florist">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -251,7 +249,7 @@
           </a>
         </div>
         <div class="col-sm-3">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-fencing">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -261,9 +259,8 @@
             </figure>
           </a>
         </div>
-
         <div class="col-sm-6">
-          <a href="#">
+          <a href="#" data-toggle="modal" data-target="#myModal">
             <figure class="image-gallery-item image"  id="image-live">
               <div class="image-gallery-overlay image-overlay">
                 <div class="tile-grid">
@@ -279,7 +276,7 @@
     </div>
     <section class="section-filled white section-info" style="margin-top: 60px">
       <div class="container">
-        <h2>How EventSource Works</h2>
+        <h2>How EventSource Works</h2>  
         <div class="row">
           <div class="col-md-4">
             <i class="flaticon-contract"></i>

@@ -9,7 +9,6 @@ var defaultQuestion;
 var answers = [];
 
 $(document).ready( function(){
-	defaultQuestion = document.getElementById("modal-body").innerHTML;
 });
 
 $("#myModal").on('hidden.bs.modal', function(){
@@ -20,6 +19,7 @@ $("#myModal").on('hidden.bs.modal', function(){
 
 function loadJSON(eventType){
 	$.getJSON("assets/jsonFiles/" + eventType.id + ".json", function(data){
+		console.log(data);
 		QuestionData=data;
 		generateModals(data);
 	});
@@ -27,10 +27,6 @@ function loadJSON(eventType){
 
 function generateModals(data){
 	questionInnerHTML = [];
-	questionInnerHTML.push(defaultQuestion);
-	document.getElementById("modal-body").innerHTML = questionInnerHTML[0];
-
-
 
 	questionCount = data.TotalCount;
 	questions = data.Questions;
@@ -48,6 +44,11 @@ function generateModals(data){
 		}else if(questions[i].Type == "Form"){
 
 		};
+
+		if(i ==0){
+			//Load first while rest of questions are still loading
+			document.getElementById("modal-body").innerHTML = questionInnerHTML[0];
+		}
 	};
 }
 
