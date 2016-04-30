@@ -10,6 +10,7 @@ var answers = [];
 var textBoxes = [];
 
 $(document).ready( function(){
+	addOtherListener();
 });
 
 $("#myModal").on('hidden.bs.modal', function(){
@@ -19,7 +20,6 @@ $("#myModal").on('hidden.bs.modal', function(){
 
 function loadJSON(eventType){
 	$.getJSON("assets/jsonFiles/" + eventType.id + ".json", function(data){
-		console.log("here");
 		QuestionData=data;
 		generateModals(data);
 	});
@@ -44,17 +44,19 @@ function generateModals(data){
 		if(questions[i].Type == ("SingleWText")){
 			generateSingleModal(questions[i]);
 
-		}else if(questions[i].Type =="SingleWOTEXT"){
+		}else if(questions[i].Type == "DateTimePicker"){
+			generateCalendarModal(questions[i]);
 
-		}else if(questions[i].Type == "Calendar"){
-
-		}else if(questions[i].Type == "Form"){
-
+		}else if(questions[i].Type == "ContactInfo"){
+			generateContactModal(questions[i]);
+		}else if(questions[i].Type == "TextBox"){
+			generateTextBoxModal(questions[i]);
 		};
 
 		if(i ==0){
-			//Load first while rest of questions are still loading
 			document.getElementById("modal-body").innerHTML = questionInnerHTML[0];
+			addTextBoxListener();
+
 		}
 	};
 }
@@ -65,6 +67,7 @@ function nextQuestion(){
 		currentQuestion++;
 		document.getElementById("modal-body").innerHTML = questionInnerHTML[currentQuestion];
 		setProgress();
+		addTextBoxListener();
 	};
 }
 
@@ -73,6 +76,7 @@ function previousQuestion(){
 		currentQuestion--;
 		document.getElementById("modal-body").innerHTML = questionInnerHTML[currentQuestion];
 		setProgress();
+		addTextBoxListener();
 	};
 }
 
@@ -144,17 +148,31 @@ function generateTextBoxes(dataRel){
 
 //============= Functions for generating single answer modals with textbox=============
 
-
-
-
-
-//============= Functions for generating other modals=============
-
 function generateCalendarModal(q){
-	var innerHTML;
+	var name = QuestionData.Name+ questions[currentQuestion].OrderId;
+
+	var innerHTML = "<form><h4 class=\"funnel-title\">Do you know when your event will be on?</h4><div class=\"funnel-input radios\"><div class=\"radio-wrapper\">";
+    innerHTML = innerHTML + "<input type=\"radio\" name=\"" + name + "\" value=\"yes\" id=\"ryes\" class=\"trigger\" data-rel=\"radio-yes-calendar\" />";
+    innerHTML = innerHTML + "<label class=\"radio\" for=\"ryes\"><span>Yes</span></label></div><div class=\"radio-wrapper\">";
+    innerHTML = innerHTML + "<input type=\"radio\" name=\""+ name +"\" value=\"not-yet\" id=\"rno\" /><label class=\"radio\" for=\"rno\"><span>Not yet</span></label>";
+    innerHTML = innerHTML + "</div></div> <div class=\"funnel-input datetimepicker radio-yes-calendar content\"><div class=\"row\">";
+    innerHTML = innerHTML + "<div class=\"form-group col-md-6\"><p class=\"text-big\">Start Date</p><div id=\""+name+"datetimepicker12\"></div></div>";
+    innerHTML = innerHTML + "<script type=\"text/javascript\">$function(){$('#"+name+"datetimepicker12').datetimepicker({inline: true,format: 'YYYY-MM-DD'});});</script>";
+	innerHTML = innerHTML + "<div class=\"form-group col-md-6\"><p class=\"text-big\">End Date</p><div id=\""+name+"datetimepicker13\"></div>";
+	innerHTML = innerHTML + "</div><script type=\"text/javascript\">$(function () {$('#"+name+"datetimepicker13').datetimepicker({inline: true,";
+	innerHTML = innerHTML + "format: 'YYYY-MM-DD'});});</script></div></div><div class=\"funnel-buttons\"><button type=\"button\" class=\"btn btn-default next-button\" onclick=\"nextQuestion()\">Continue</button>";
+	innerHTML = innerHTML + "<p><a class=\"previous-button\" onclick=\"previousQuestion()\">Previous Question</a></p></div></form>";
 	questionInnerHTML.push(innerHTML);
 }
-function generateMultiModal(q){
-	var innerHTML;
+function generateContactModal(q){
+	var name = QuestionData.Name+ questions[currentQuestion].OrderId;
+	var innerHTML = document.getElementById("contact-modal-body").innerHTML;
+
+	questionInnerHTML.push(innerHTML);
+}
+function generateTextBoxModal(q){
+	var name = QuestionData.Name+ questions[currentQuestion].OrderId;
+	var innerHTML = "<form><div class=\"funnel-input\"><textarea style=\"display: inline;\" class=\"text-input " + name+" content\" placeholder=\"Please explain\"></textarea></div></form>";
+	innerHTML = innerHTML + generateModalEnding();
 	questionInnerHTML.push(innerHTML);
 }
