@@ -13,5 +13,4 @@ $(document).ready(function(){
 			}
 		});
 	});
-	//This is for 
 });

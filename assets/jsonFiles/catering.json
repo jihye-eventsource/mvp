@@ -1,8 +1,8 @@
 {
-	"Name":"sporting",
+	"Name":"Catering",
 	"Questions":[
 		{	"OrderId":1,
-			"Type":"Single",
+			"Type":"SingleWText",
 			"Question":"FirstQuestion?",
 			"Choices":["choice1","choice2","choice3","choice4"],
 			"ButtonFowardText":"continue",
@@ -11,10 +11,19 @@
 			"GACode":""
 		},
 		{	"OrderId":2,
-			"Type":"multi",
+			"Type":"SingleWText",
 			"Question":"second?",
-			"Choices":[],
+			"Choices":["fdasfd"],
 			"ButtonFowardText":"continue",
+			"ButtonBackwardText":"back",
+			"Answer":[],
+			"GACode":""
+		},
+		{	"OrderId":3,
+			"Type":"SingleWText",
+			"Question":"third?",
+			"Choices":["1","2","3"],
+			"ButtonFowardText":"finish",
 			"ButtonBackwardText":"back",
 			"Answer":[],
 			"GACode":""
