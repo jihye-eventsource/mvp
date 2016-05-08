@@ -29,4 +29,8 @@ function addTextBoxListener(){
 			}
 		});
 	});
+	$('.datetimepicker-calendar').datetimepicker({
+		inline: true,
+		format: 'YYYY-MM-DD'
+	});
 }
