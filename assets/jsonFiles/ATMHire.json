@@ -1,9 +1,9 @@
 {
-	"Name":"Marquees",
+	"Name":"ATM Hire",
 	"Questions":[
 	{	"OrderId":1,
 	"Type":"SingleWText",
-	"Question":"Looks like you need a marquee hire. We've got you sorted. What kind of event?",
+	"Question":"Looks like you need an ATM. We've got you sorted. What kind of event?",
 	"Choices":["Musical","Sporting","Wedding","Corporate / Business", "Party", "School", "Film", "Other...(Please specify)=="],
 	"ButtonFowardText":"Continue",
 	"ButtonBackwardText":"cancel",
