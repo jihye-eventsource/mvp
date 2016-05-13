@@ -22,7 +22,7 @@
 	{	"OrderId":3,
 	"Type":"TextBox",
 	"Question":"Do you have a particular area in mind?",
-	"Choices":[""],
+	"Choices":[],
 	"ButtonFowardText":"continue",
 	"ButtonBackwardText":"back",
 	"Answer":[],
@@ -41,7 +41,7 @@
 	"Type":"ContactInfo",
 	"Question":"Who is the event planner or best contact?",
 	"Choices":[],
-	"ButtonFowardText":"continue",
+	"ButtonFowardText":"submit",
 	"ButtonBackwardText":"back",
 	"Answer":[],
 	"GACode":""
