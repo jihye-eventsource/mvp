@@ -33,4 +33,9 @@ function addTextBoxListener(){
 		inline: true,
 		format: 'YYYY-MM-DD'
 	});
+
+	$('form').submit(function(ev) {
+		nextQuestion();
+		return false;
+	});
 }
