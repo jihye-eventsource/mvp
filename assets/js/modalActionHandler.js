@@ -29,4 +29,13 @@ function addTextBoxListener(){
 			}
 		});
 	});
+	$('.datetimepicker-calendar').datetimepicker({
+		inline: true,
+		format: 'YYYY-MM-DD'
+	});
+
+	$('form').submit(function(ev) {
+		nextQuestion();
+		return false;
+	});
 }

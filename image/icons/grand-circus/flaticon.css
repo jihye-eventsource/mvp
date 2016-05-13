@@ -1,0 +1,81 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 19/02/2016 14:53
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-aerial-ring:before { content: "\f100"; }
+.flaticon-ball:before { content: "\f101"; }
+.flaticon-balloons:before { content: "\f102"; }
+.flaticon-big-bow:before { content: "\f103"; }
+.flaticon-bycicle:before { content: "\f104"; }
+.flaticon-cannon:before { content: "\f105"; }
+.flaticon-carousel:before { content: "\f106"; }
+.flaticon-circus-bear:before { content: "\f107"; }
+.flaticon-circus-camel:before { content: "\f108"; }
+.flaticon-circus-dress:before { content: "\f109"; }
+.flaticon-circus-elephant:before { content: "\f10a"; }
+.flaticon-circus-lion:before { content: "\f10b"; }
+.flaticon-circus-llama:before { content: "\f10c"; }
+.flaticon-circus-monkey:before { content: "\f10d"; }
+.flaticon-circus-parrot:before { content: "\f10e"; }
+.flaticon-circus-podium:before { content: "\f10f"; }
+.flaticon-circus-ring:before { content: "\f110"; }
+.flaticon-circus-seal:before { content: "\f111"; }
+.flaticon-circus-tent:before { content: "\f112"; }
+.flaticon-circus-tickets:before { content: "\f113"; }
+.flaticon-circus-tiger:before { content: "\f114"; }
+.flaticon-circus-wagon:before { content: "\f115"; }
+.flaticon-clown-costume:before { content: "\f116"; }
+.flaticon-clown-hat:before { content: "\f117"; }
+.flaticon-clown-with-hat:before { content: "\f118"; }
+.flaticon-diabolo:before { content: "\f119"; }
+.flaticon-face-paints:before { content: "\f11a"; }
+.flaticon-ferris-wheel:before { content: "\f11b"; }
+.flaticon-fire-gear:before { content: "\f11c"; }
+.flaticon-fireworks:before { content: "\f11d"; }
+.flaticon-flag:before { content: "\f11e"; }
+.flaticon-giraffe:before { content: "\f11f"; }
+.flaticon-handbalancing:before { content: "\f120"; }
+.flaticon-hot-air-balloon:before { content: "\f121"; }
+.flaticon-hula-hoop:before { content: "\f122"; }
+.flaticon-jugglin:before { content: "\f123"; }
+.flaticon-jugglin-mace:before { content: "\f124"; }
+.flaticon-knife-throwing:before { content: "\f125"; }
+.flaticon-magic-wand:before { content: "\f126"; }
+.flaticon-mime:before { content: "\f127"; }
+.flaticon-moustache:before { content: "\f128"; }
+.flaticon-popcorn:before { content: "\f129"; }
+.flaticon-puppet:before { content: "\f12a"; }
+.flaticon-rabbit-in-the-hat:before { content: "\f12b"; }
+.flaticon-ring-of-fire:before { content: "\f12c"; }
+.flaticon-stick:before { content: "\f12d"; }
+.flaticon-swing:before { content: "\f12e"; }
+.flaticon-ticket-tent:before { content: "\f12f"; }
+.flaticon-trapeze-bar:before { content: "\f130"; }
+.flaticon-umbrella:before { content: "\f131"; }
