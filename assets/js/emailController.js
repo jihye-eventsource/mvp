@@ -20,7 +20,7 @@ function sendEmail(sendData){
 	postObj.text = sendData;
 	postObj.from = 'donotreply@eventsource.co.nz'; 
 
-	$.post("https://api.sendgrid.com/api/mail.send.json", postObj, function(data){
+	$.post("https://smtp.sendgrid.net/api/mail.send.json", postObj, function(data){
 		if(data.message!=null){
 			console.log(data.message);
 		}
