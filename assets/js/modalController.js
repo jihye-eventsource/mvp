@@ -6,7 +6,6 @@ var currentQuestion = 0;
 var progress = 0;
 var questionInnerHTML = [];
 var defaultQuestion;
-var answers = [];
 var textBoxes = [];
 
 $(document).ready( function(){
@@ -53,7 +52,7 @@ function generateModals(data){
 			generateTextBoxModal(questions[i]);
 		};
 
-		if(i ==0){
+		if(i == 0){
 			document.getElementById("modal-body").innerHTML = questionInnerHTML[0];
 			addTextBoxListener();
 
@@ -62,6 +61,7 @@ function generateModals(data){
 }
 
 function nextQuestion(){
+	saveAnswer();
 	if(questionCount > 0 && currentQuestion<questionCount){
 		currentQuestion++;
 		document.getElementById("modal-body").innerHTML = questionInnerHTML[currentQuestion];
@@ -81,6 +81,38 @@ function previousQuestion(){
 		setProgress();
 		addTextBoxListener();
 	};
+}
+
+function saveAnswer() {
+
+	var answers = [];
+
+	//Iterate through each radio
+	$("form input[type='radio']:checked").each(function(){
+		var input = $(this).val();
+		if (input) {
+			answers.push(input);
+		}
+	});
+
+
+	$("form input[type='text']").each(function(){
+		var input = $(this).val();
+		if (input) {
+			answers.push(input);
+		}
+	});
+
+	$("form textarea").each(function(){
+		console.log(this);
+		var input = $(this).val();
+		if (input) {
+			answers.push(input);
+		}
+	});
+
+	questions[currentQuestion].Answer = answers;
+	console.log(answers);
 }
 
 function setProgress(){
@@ -127,7 +159,7 @@ function generateSingleAnswer(answer,number){
 	name = name.replace(/\s/g, '');
 	if(answer.indexOf("==") < 0){
 		var x ="<div class='radio-wrapper'>";
-		x = x + "<input type='radio' name='" + name +"' value='"+ number +"' id='r" + number + "' required/>";
+		x = x + "<input type='radio' name='" + name +"' value=\""+ answer +"\" id='r" + number + "' required/>";
 		x = x + "<label class='radio' for='r"+number+"'><span>"+ answer + "</span></label></div>";
 		return x;
 	}

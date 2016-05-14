@@ -88,8 +88,8 @@
                       <input type="text" id="input-service-autocomplete" class="form-control typeahead" placeholder="E.g. Marquee, Florist, Stylist etc">
                     </div>
                     <div class="form-group">
-                      <label>Where do you need it?</label>                    
-                      <input type="text" class="form-control" placeholder="Auckland Central, etc...">
+                      <label>Where do you need it?</label>   
+                      <input type="text" id="input-location-autocomplete" class="form-control" onFocus="geolocate()"  placeholder="Auckland Central, etc...">
                     </div>
                     <button type="button" class="btn btn-default btn-block btn-lg" id="musical" data-toggle="modal" data-target="#myModal" onclick="loadJSON(this)">Source</button>
                   </form>
@@ -406,47 +406,7 @@
             <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
           </div>
           <div class="modal-body" id = "modal-body">
-            <form>
-              <h4 class="funnel-title">Looks like you need a <span class="funnel-name">dragon dance</span>. We've got you covered.</br>What kind of event?</h4>
-              <div class="funnel-input radios">
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="1" id="r1" checked="checked" />
-                  <label class="radio" for="r1"><span>Musical</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="2" id="r2" />
-                  <label class="radio" for="r2"><span>Sporting</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="3" id="r3" />
-                  <label class="radio" for="r3"><span>Wedding</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="4" id="r4" checked="checked" />
-                  <label class="radio" for="r4"><span>Corporate / Business</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="5" id="r5" />
-                  <label class="radio" for="r5"><span>Party</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="6" id="r6" />
-                  <label class="radio" for="r6"><span>School</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup" value="7" id="r7" />
-                  <label class="radio" for="r7"><span>Film</span></label>     
-                </div>
-                <div class="radio-wrapper">         
-                  <input type="radio" name="rGroup" value="8" id="r8" />
-                  <label class="radio" for="r8"><span>Other (Please Specify)</span></label>    
-                </div>
-              </div>
-              <div class="funnel-buttons">
-                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
-                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
-              </div>
-            </form>
+
           </div>
           <div class="modal-progressbar">
             <div class="progressbar-percent-bar" id = "progBar"></div>
@@ -455,183 +415,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div id="modal-SingleSelectOther" class="modal fade funnel-modal" role="dialog">
-      <div class="modal-dialog">
-        <!-- Hidden input -->
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <h4 class="funnel-title">Looks like you need a <span class="funnel-name">dragon dance</span>. We've got you covered.</br>What kind of event?</h4>
-              <div class="funnel-input radios">
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="1" id="r12" checked="checked" />
-                  <label class="radio" for="r12"><span>Musical</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="2" id="r22" />
-                  <label class="radio" for="r22"><span>Sporting</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="3" id="r32" />
-                  <label class="radio" for="r32"><span>Wedding</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="4" id="r42" checked="checked" />
-                  <label class="radio" for="r42"><span>Corporate / Business</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="5" id="r52" />
-                  <label class="radio" for="r52"><span>Party</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="6" id="r62" />
-                  <label class="radio" for="r62"><span>School</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="7" id="r72" />
-                  <label class="radio" for="r72"><span>Film</span></label>     
-                </div>
-                <div class="radio-wrapper">         
-                  <input type="radio" name="rGroup2" value="8" id="r82" class="trigger" data-rel="radio-other-text-input" />
-                  <label class="radio" for="r82"><span>Other (Please Specify)</span></label>    
-                </div>
-              </div>
-              <div class="funnel-input radio-other-text-input content">
-                <textarea class="text-input" placeholder="Please explain"></textarea>
-              </div>
-              <div class="funnel-buttons">
-                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
-                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
-              </div>
-            </form>
-          </div>
-          <div class="modal-progressbar">
-            <div class="progressbar-percent-bar"></div>
-            <div class="progressbar-overlay-progress">
-              <label>15% Completed</label>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <div id="modal-Date" class="modal fade funnel-modal" role="dialog">
-      <div class="modal-dialog">
-        <!-- Hidden input -->
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
-          </div>
-          <div class="modal-body" id="calendar-modal-body">
-            <form>
-              <h4 class="funnel-title">Do you know when your event will be on?</h4>
-              <div class="funnel-input radios">
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="yes" id="ryes" class="trigger" data-rel="radio-yes-calendar" />
-                  <label class="radio" for="ryes"><span>Yes</span></label>
-                </div>
-                <div class="radio-wrapper">
-                  <input type="radio" name="rGroup2" value="not-yet" id="rno" />
-                  <label class="radio" for="rno"><span>Not yet</span></label>    
-                </div>
-              </div>
-              <div class="funnel-input datetimepicker radio-yes-calendar content">
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <p class="text-big">Start Date</p>
-                    <div id="datetimepicker12"></div>
-                  </div>
-                  <script type="text/javascript">
-                  $(function () {
-                    $('#datetimepicker12').datetimepicker({
-                      inline: true,
-                      format: 'YYYY-MM-DD'
-                    });
-                  });
-                  </script>
-                  <div class="form-group col-md-6">
-                    <p class="text-big">End Date</p>
-                    <div id="datetimepicker13"></div>
-                  </div>
-                  <script type="text/javascript">
-                  $(function () {
-                    $('#datetimepicker13').datetimepicker({
-                      inline: true,
-                      format: 'YYYY-MM-DD'
-                    });
-                  });
-                  </script>
-                </div>
-              </div>
-              <div class="funnel-buttons">
-                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Continue</button>
-                <p><a class="previous-button" onclick="previousQuestion()">Previous Question</a></p>
-              </div>
-            </form>
-          </div>
-          <div class="modal-progressbar">
-            <div class="progressbar-percent-bar"></div>
-            <div class="progressbar-overlay-progress">
-              <label>15% Completed</label>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <div id="modal-EmailAndContact" class="modal fade funnel-modal" role="dialog">
-      <div class="modal-dialog">
-        <!-- Hidden input -->
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><i class='fa fa-times'></i></button>
-          </div>
-          <div class="modal-body" id="contact-modal-body">
-            <form>
-              <h4 class="funnel-title">Thank you. Finally, how do we contact you?</h4>
-              <div class="funnel-input">
-                <div class="row">
-                  <div class="form-group textbox col-sm-6">
-                    <input type="text" placeholder="First name"/>
-                  </div>
-                  <div class="form-group textbox col-sm-6">
-                    <input type="text" placeholder="Last name"/>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-group textbox col-sm-6">
-                    <input type="email" placeholder="Email"/>
-                  </div>
-                  <div class="form-group textbox col-sm-6">
-                    <input type="tel" placeholder="Phone"/>
-                  </div>
-                </div>
-              </div>
-              <div class="funnel-buttons">
-                <button type="button" class="btn btn-default next-button" onclick="nextQuestion()">Submit</button>
-              </div>
-            </form>
-          </div>
-          <div class="modal-progressbar">
-            <div class="progressbar-percent-bar"></div>
-            <div class="progressbar-overlay-progress">
-              <label>15% Completed</label>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
     <!-- Modal - Generated -->
@@ -644,6 +427,11 @@
     <script src="assets/js/modalActionHandler.js"></script>
     <script src="assets/js/modalController.js"></script>
     <script src="assets/js/autocomplete.js"></script>
+    <script src="assets/js/autocomplete_geolocation.js"></script>
+
+    <!-- Include Geolocation Async call -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT3mB1kS3JLjVMLl4pw30P7SbGN2Zlb2Y&libraries=places&callback=initGeolocationAutocomplete"
+    async defer></script>
 
   </body>
   </html>
