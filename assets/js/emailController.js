@@ -20,8 +20,6 @@ function sendEmail(sendData){
 	postObj.text = sendData;
 	postObj.from = 'donotreply@eventsource.co.nz'; 
 
-
-	/**
 	$.post("https://api.sendgrid.com/api/mail.send.json", postObj, function(data){
 		if(data.message!=null){
 			console.log(data.message);
@@ -29,15 +27,5 @@ function sendEmail(sendData){
 		else{
 			console.log("wtf");
 		}
-	});
-*/
-
-
-	$.ajax( {url:'https://api.sendgrid.com/api/mail.send.json',
-        type:"POST",
-        dataType:"json",
-        data:postObj, 
-        success:function(data, textStatus, jqXHR) {alert("success");},
-        error: function(jqXHR, textStatus, errorThrown) {alert("failure");}
 	});
 }
