@@ -61,7 +61,10 @@ function generateModals(data){
 }
 
 function nextQuestion(){
+
 	saveAnswer();
+	questionInnerHTML[currentQuestion] = document.getElementById("modal-body").innerHTML;
+
 	if(questionCount > 0 && currentQuestion<questionCount){
 		currentQuestion++;
 		document.getElementById("modal-body").innerHTML = questionInnerHTML[currentQuestion];
@@ -71,6 +74,7 @@ function nextQuestion(){
 	else if (currentQuestion == questionCount) {
 		$('#myModal').modal('toggle');
 		alert("Thank you for your enquiry! Our friendly event planners will contact you shortly.");
+
 	};
 }
 
@@ -223,7 +227,7 @@ function generateContactModal(q){
 	"</div>" +
 	"</div>" +
 	"<div class='funnel-buttons'>" +
-	"<input type='submit' class='btn btn-default next-button' value='Continue'/>" +
+	"<input type='submit' class='btn btn-default next-button' value='Submit'/>" +
 	"</div>" +
 	"</form>";
 
