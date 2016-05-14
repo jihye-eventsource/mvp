@@ -1,5 +1,5 @@
 {
-	"Name":"Marquees",
+	"Name":"Catering Equipment",
 	"Questions":[
 	{	"OrderId":1,
 	"Type":"SingleWText",
@@ -30,7 +30,7 @@
 	},
 	{	"OrderId":4,
 	"Type":"DateTimePicker",
-	"Question":"When will you require the catering equipment?",
+	"Question":"When and where will you require the catering equipment?",
 	"Choices":[],
 	"ButtonFowardText":"continue",
 	"ButtonBackwardText":"back",
