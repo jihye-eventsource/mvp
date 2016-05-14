@@ -40,7 +40,7 @@
 	{	"OrderId":5,
 	"Type":"SingleWText",
 	"Question":"Will your guests be seated or standing?",
-	"Choices":["Yes","No","Undecided"],
+	"Choices":["Seated","Standing","Undecided"],
 	"ButtonFowardText":"continue",
 	"ButtonBackwardText":"back",
 	"Answer":[],
