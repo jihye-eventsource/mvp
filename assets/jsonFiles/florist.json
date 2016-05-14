@@ -13,7 +13,7 @@
 	{	"OrderId":2,
 	"Type":"SingleWText",
 	"Question":"Where is yoru event being held?",
-	"Choices":["Offics","Restaurant Or Bar","Hotel","School", "Public Venue", "Other...(Please specify)=="],
+	"Choices":["Office","Restaurant Or Bar","Hotel","School", "Public Venue", "Other...(Please specify)=="],
 	"ButtonFowardText":"continue",
 	"ButtonBackwardText":"back",
 	"Answer":[],
