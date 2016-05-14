@@ -1,14 +1,3 @@
-	var invocation = new XMLHttpRequest();
-	var url = 'https://api.sendgrid.com/api/mail.send.json';
-
-$(document).ready( function(){
-	preflight();
-});
-
-function preflight(){
-
-}
-
 function sendEmail(sendData){
 	var postObj = new Object();
 	postObj.api_user = 'azure_f0f9fe015c157571b87092e53fe75ca8@azure.com';
@@ -20,12 +9,17 @@ function sendEmail(sendData){
 	postObj.text = sendData;
 	postObj.from = 'donotreply@eventsource.co.nz'; 
 
-	$.post("https://smtp.sendgrid.net/api/mail.send.json", postObj, function(data){
-		if(data.message!=null){
-			console.log(data.message);
-		}
-		else{
-			console.log("wtf");
-		}
+	$.ajax({
+		url: "https://api.sendgrid.com/api/mail.send.json",
+		type: 'POST',
+        data: postObj,
+        async: false,
+        success: function (data) {
+          alert(data)
+        },
+        crossdomain:true,
+        cache: false,
+        contentType: false,
+        processData: false
 	});
 }

@@ -11,7 +11,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-open": "^0.2.3",
     "matchdep": "^1.0.1",
-    "grunt-contrib-concat": "^0.5.1"
+    "grunt-contrib-concat": "^0.5.1",
   },
   "devDependencies": {
     "modernizr": "^3.3.1",
