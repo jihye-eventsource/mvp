@@ -201,6 +201,12 @@ footer{
   padding-top: 64px;
   padding-bottom: 64px;
 }
+* .dropdown-menu {
+  width: 100%;
+}
+* .dropdown-menu > li > a {
+  padding: 20px 8px;
+}
 .cta-form-container {
   min-height: 20px;
   padding: 32px;
