@@ -228,6 +228,7 @@ function generateContactModal(q){
 	"</div>" +
 	"<div class='funnel-buttons'>" +
 	"<input type='submit' class='btn btn-default next-button' value='Submit'/>" +
+	"<p><a class='previous-button' onclick='previousQuestion()'>Previous Question</a></p>" +
 	"</div>" +
 	"</form>";
 

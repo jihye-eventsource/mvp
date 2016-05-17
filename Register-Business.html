@@ -15,7 +15,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
 
   <!-- Font Awesome -->
-  <link href="https://use.fontawesome.com/d248badad6.js" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" />
 
   <!-- Compiled Styles -->
   <link href="assets/main.css" rel="stylesheet" />
@@ -56,7 +56,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="Main.html">EventSource</a>
+          <a class="navbar-brand" href="index.html">EventSource</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
@@ -99,7 +99,7 @@
                       <input type="text" class="form-control input-small" placeholder="Business Name">
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control input-small" placeholder="State, Surburb">
+                      <input type="text" id="input-location-autocomplete" class="form-control input-small" onFocus="geolocate()"  placeholder="State, Surburb">
                     </div>
                     <div class="form-group">
                       <input type="email" class="form-control input-small" placeholder="Email">
@@ -125,12 +125,12 @@
           <div class="col-md-4">
             <i class="flaticon-contract"></i>
             <p class="text-big">Sign up as an EventSource supplier</p>
-            <p>Set up your Porch profile to start getting noticed by the right customers.</p>
+            <p>Set up your EventSource profile & be found by the right customers.</p>
           </div>
           <div class="col-md-4">
             <i class="flaticon-network"></i>
             <p class="text-big">Receive projects you want</p>
-            <p>We send you project requests based on the kind of work you want and where you want it.</p>
+            <p>We send you qualified hire opportunities based on the kind of service you provide - in the areas you provide it.</p>
           </div>
           <div class="col-md-4">
             <i class="flaticon-agreement"></i>
@@ -160,8 +160,6 @@
         </div>
       </div>
     </section>
-    <div class="container">
-    </div>
     <section class="container section-heading">
       <h2>What Other Event Planners Have Said</h2>
     </section>
@@ -170,36 +168,31 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="testimonial">
-              <figure class="image">
-                <div class="image-overlay">
-                </div>
+              <figure class="image" id="image-corporate">
               </figure>
               <div class="testimonial-body">
-                <p>"We are tenants and have moved every 6-12 months. Over the 30yrs of our marriage we have found it difficult to hire businesses that we can trust with our antique furniture. But with Oneflare's help we can now be confident that we are hiring quality businesses."
+                <p>"Listing our event hire firm with EventSource has been a great business decision. We've increased our revenue and business accessibility to event planners within our service region, Auckland."
                 </p>
               </div>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="testimonial">
-              <figure class="image">
-                <div class="image-overlay">
-                </div>
+              <figure class="image" id="image-venue">
               </figure>
               <div class="testimonial-body">
-                <p>"My husband and I wanted to repaint the wall of the kids room. I found Oneflare and I loved the idea of receiving quotes without doing anything. We hired Andrew who completed the entire room quickly. Now, the room feels a lot bigger and brighter."
+                <p>"EventSource was an easy and affordable way to market our venue. Since listing our property with EventSource, we've received dozen enquiries and hosted countless events. It's exactly what we needed!"
                 </p>
               </div>
             </div>
           </div>
+
           <div class="col-sm-4">
             <div class="testimonial">
-              <figure class="image">
-                <div class="image-overlay">
-                </div>
+              <figure class="image" id="image-photographer">
               </figure>
               <div class="testimonial-body">
-                <p>"Our home needed some major plumbing work done. Oneflare made my life a lot easier because I really didn't know where to start or which plumber to contact. After putting up a request I was in touch with plumbers and the work was done in no time."
+                <p>"As a part-time photographer, EventSource enabled me to list my services and receive enquiries from local clients. It's great because I can pick and choose events that suit my schedule."
                 </p>
               </div>
             </div>
@@ -213,7 +206,7 @@
         <div class="overlay">
           <div class="container overlay-padding">
             <div class="overlay-heading">
-              <h2>Join EventSource today for free, and start get more of the work you want</h2>
+              <h2>Join EventSource today for free, and start receiving hire opportunities. It's that easy</h2>
               <p></p>
             </div>
             <div>
@@ -236,7 +229,7 @@
                       <input type="text" class="form-control input-small" placeholder="Business Name">
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control input-small" placeholder="State, Surburb">
+                      <input type="text" id="input-location-autocomplete" class="form-control input-small" onFocus="geolocate()"  placeholder="State, Surburb">
                     </div>
                     <div class="form-group">
                       <input type="email" class="form-control input-small" placeholder="Email">
@@ -254,43 +247,43 @@
         </div>
       </div>
     </section>
-    <footer id="footer" style="margin-top: 50px">
+    <footer id="footer">
       <div class="footer-main">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
               <h2>Browse event hire and services</h2>
               <ul class="list">
-                <li><a>Venues</a></li>
-                <li><a>Marquees</a></li>
-                <li><a>Furniture</a></li>
-                <li><a>Lighting</a></li>
-                <li><a>AV Equipment</a></li>
-                <li><a>Portable Toilets</a></li>
-                <li><a>Catering</a></li>
-                <li><a>Temporary Fencing</a></li>
-                <li><a>Transport</a></li>
-                <li><a>Suit Hire</a></li>
-                <li><a>Wedding Planners</a></li>
-                <li><a>Phorographers</a></li>
-                <li><a>Stylists</a></li>
-                <li><a>Florists</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="venue" onclick="loadJSON(this)">Venues</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="marquee" onclick="loadJSON(this)">Marquees</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="furniture" onclick="loadJSON(this)">Furniture</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="lighting" onclick="loadJSON(this)">Lighting</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="AVEquipment" onclick="loadJSON(this)">AV Equipment</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="portableToilet" onclick="loadJSON(this)">Portable Toilets</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="cateringService" onclick="loadJSON(this)">Catering</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="temporaryFencing" onclick="loadJSON(this)">Temporary Fencing</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="entertainer" onclick="loadJSON(this)">Live Entertainment</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="suitHire" onclick="loadJSON(this)">Suit & Dress Hire</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="weddingPlanner" onclick="loadJSON(this)">Wedding Planners</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="photographer" onclick="loadJSON(this)">Phorographers</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="stylist" onclick="loadJSON(this)">Stylists</a></li>
+                <li><a data-toggle="modal" data-target="#myModal" id="florist" onclick="loadJSON(this)">Florists</a></li>
               </ul>
             </div>
             <div class="col-sm-6 col-md-3">
               <h2>EventSource</h2>
               <ul>
-                <li><a>Home</a></li>
-                <li><a>How EventSource Works</a></li>
-                <li><a>Become a Partner</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="How-It-Works.html">How EventSource Works</a></li>
+                <li><a href="Register-Business.html">Become a Partner</a></li>
               </ul>
             </div>
             <div class="col-sm-6 col-md-3">
-              <h2>Footer heading</h2>
-              <ul>
-                <li><a>11111</a></li>
-                <li><a>22222</a></li>
-                <li><a>33333</a></li>
+              <h2>Get in touch</h2>
+              <ul class="linear-ul">
+                <li><a><i class="fa fa-2x fa-facebook-square"></i></a></li>
+                <li><a><i class="fa fa-2x fa-twitter-square"></i></a></li>
+                <li><a><i class="fa fa-2x fa-linkedin-square"></i></a></li>
               </ul>
             </div>         
           </div>
@@ -305,12 +298,15 @@
           </div>
         </div>
       </div>
-
-
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="assets/js/autocomplete_geolocation.js"></script>
+
+    <!-- Include Geolocation Async call -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCT3mB1kS3JLjVMLl4pw30P7SbGN2Zlb2Y&libraries=places&callback=initGeolocationAutocomplete"
+    async defer></script>
   </body>
   </html>
