@@ -41,6 +41,7 @@ function generateModals(data){
 	for (var i = 0; i<questions.length; i++){
 		if(questions[i].Type == ("SingleWText")){
 			generateSingleModal(questions[i]);
+			textBoxes = [];
 
 		}else if(questions[i].Type == "DateTimePicker"){
 			generateCalendarModal(questions[i]);
