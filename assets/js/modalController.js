@@ -34,7 +34,7 @@ function resetAll(){
 }
 
 function generateModals(data){
-	generateTextBoxes
+	resetAll();
 	questions = data.Questions;
 	questionCount = questions.length - 1;
 	setProgress();
